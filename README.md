@@ -45,7 +45,7 @@ python qr_generator.py
 ```
 $ python qr_generator.py https://www.bioxsystems.com/
 QR code for https://www.bioxsystems.com/
-Saved to: .../Assignment_2/biox_qr.png
+Saved to: .../Assignment_2/qrcode.png
 ```
 
 
@@ -55,12 +55,3 @@ Saved to: .../Assignment_2/biox_qr.png
 | --- | --- |
 | `qr_generator.py` | Application source code |
 | `requirements.txt` | Manifest of package dependencies |
-
-## Notes on implementation
-
-- Input is validated with `urllib.parse.urlparse`; only `http` and `https`
-  addresses with a domain are accepted.
-- Error correction level **M** is used, which recovers roughly 15% of a
-  damaged or partially obscured symbol.
-- `version=None` with `fit=True` lets the library choose the smallest QR
-  symbol size that fits the data.
